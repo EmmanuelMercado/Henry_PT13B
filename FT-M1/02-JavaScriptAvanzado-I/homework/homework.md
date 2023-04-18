@@ -16,7 +16,7 @@ var c = function (a, b, c) {
    console.log(a); //8
    var f = function (a, b, c) {
       b = a;
-      console.log(b); //9
+      console.log(b); //8
       b = c;
       var x = 5;
    };
@@ -40,23 +40,23 @@ baz = 2;
 ```
 
 ```javascript
-var instructor = 'Tony';
+var instructor = 'Tony';  
 if (true) {
    var instructor = 'Franco';
 }
-console.log(instructor);
+console.log(instructor); //Franco
 ```
 
 ```javascript
 var instructor = 'Tony';
-console.log(instructor);
+console.log(instructor); // Tony
 (function () {
    if (true) {
       var instructor = 'Franco';
-      console.log(instructor);
+      console.log(instructor); // Franco
    }
 })();
-console.log(instructor);
+console.log(instructor); //Tony
 ```
 
 ```javascript
@@ -65,11 +65,11 @@ let pm = 'Franco';
 if (true) {
    var instructor = 'The Flash';
    let pm = 'Reverse Flash';
-   console.log(instructor);
-   console.log(pm);
+   console.log(instructor); //'The Flash'
+   console.log(pm); // Reverse Flash 
 }
-console.log(instructor);
-console.log(pm);
+console.log(instructor); //'Tony'
+console.log(pm); // 'Franco'
 ```
 
 ### Coerción de Datos
@@ -77,15 +77,15 @@ console.log(pm);
 ¿Cuál crees que será el resultado de la ejecución de estas operaciones?:
 
 ```javascript
-6 / "3"
-"2" * "3"
-4 + 5 + "px"
-"$" + 4 + 5
-"4" - 2
-"4px" - 2
-7 / 0
-{}[0]
-parseInt("09")
+6 / "3" // 2
+"2" * "3" // 6
+4 + 5 + "px" //45px
+"$" + 4 + 5 //$45
+"4" - 2 //2
+"4px" - 2 // NaN
+7 / 0 //0
+{}[0]|
+parseInt("09") // 9
 5 && 2
 2 && 5
 5 || 0
